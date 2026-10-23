@@ -1,5 +1,5 @@
 # Запуск и развертывание вашего приложения IBAHUPGRAIDER
-
+https://github.com/mayrs36k-design/IBANUPGRAIDER/releases/tag/1.0 СТРАНИЦА РЕЛИЗОВ С АПК
 Здесь содержится всё необходимое для локального запуска вашего приложения.
 
 Посмотреть ваше приложение в AI Studio: https://ai.studio
