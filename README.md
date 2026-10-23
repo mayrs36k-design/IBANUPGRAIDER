@@ -1,45 +1,18 @@
-# Запуск и развертывание вашей игры IBAHUPGRAIDER
+# Run and deploy your IBAHUPGRAIDER app
 
-В этом руководстве содержится всё необходимое для запуска и настройки вашей игры локально. IBAHUPGRAIDER — это игра в стиле мусор-дроп (сбор/выпадение предметов), созданная на базе ваших диких идей.
+This contains everything you need to run your app locally.
 
-## ⚠️ ВАЖНО: Распаковка полных файлов приложения
+View your app in AI Studio: https://ai.studio
 
-Из-за ограничений GitHub на размер загружаемых файлов, полный код приложения не поместился в репозиторий целиком. 
+## Run Locally
 
-**Чтобы приложение работало корректно, обязательно выполните следующие шаги:**
-1. Найдите файл **`App.zip`** в корневой папке проекта.
-2. Разархивируйте его содержимое.
-3. Поместите все извлеченные файлы и папки в ту же директорию, **рядом со всеми остальными файлами** проекта (с заменой, если потребуется). Без этого проект не соберется!
+**Prerequisites:**  [Android Studio](https://android.com)
 
-## Локальный запуск
-
-**Предварительные требования:** Установленная [Android Studio](https://android.com)
-
-1. Откройте Android Studio.
-2. Выберите **Open** (Открыть) и укажите папку, содержащую этот проект (после распаковки `App.zip`).
-3. Разрешите Android Studio автоматически исправить любые несовместимости при импорте проекта.
-4. Создайте файл с именем `.env` в корневой директории проекта и укажите там ваш ключ API: `GEMINI_API_KEY=ваш_ключ` (в качестве примера используйте `.env.example`).
-5. Удалите следующую строку из файла `build.gradle.kts` вашего приложения: `signingConfig = signingConfigs.getByName("debugConfig")`.
-6. Запустите игру на эмуляторе или реальном Android-устройстве.
-
----
-
-## 🚀 Как настроить страницу с релизами (Releases) в GitHub
-
-Чтобы игроки могли легко скачивать готовую игру (например, в формате `.apk` или `.zip`), создайте страницу релизов прямо в вашем репозитории:
-
-1. **Перейдите в ваш репозиторий** на сайте GitHub.
-2. В правой колонке экрана найдите блок **Releases** и нажмите кнопку **Create a new release** (Создать новый релиз). Если это ваш первый релиз, там будет кнопка *Draft a new release*.
-3. **Создайте тег версии**:
-   * В поле *Choose a tag* введите версию, например `v1.0.0`, и нажмите *Create new tag*.
-   * В поле *Target* оставьте ветку `main` (или ту, где лежит актуальный код).
-4. **Заполните описание**:
-   * В поле *Release title* напишите название, например: `Первый релиз IBAHUPGRAIDER!`.
-   * В большом текстовом поле ниже опишите, что изменилось или как играть.
-5. **Загрузите файлы игры**:
-   * В самом низу будет зона для перетаскивания файлов (*Attach binaries by dropping them here*).
-   * Перетащите туда готовый **`.apk` файл** для установки на телефон или финальный архив с игрой.
-6. **Опубликуйте релиз**:
-   * Нажмите зеленую кнопку **Publish release** (Опубликовать релиз).
-
-Теперь на главной странице вашего гитхаба справа появится красивая ссылка на скачивание вашей игры!
+1. Open Android Studio
+2. Select **Open** and choose the directory containing this project
+3. **CRITICAL:** Locate the `App.zip` file in the root directory. Unzip it and place all extracted files directly into the project directory with your other files. The full source code could not be fully uploaded directly due to GitHub file size limits.
+4. Allow Android Studio to fix any incompatibilities as it imports the project.
+5. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
+6. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
+7. Run the app on an emulator or physical device
+8. This app operates as a specialized "trash-drop" simulator game loop, handling real-time physics and object instantiation mapped directly via Gemini API context triggers.
