@@ -1,0 +1,6 @@
+{
+  "name": "IBAHURPGRAIDER",
+  "description": "CS2 симулятор кейсов IBAHURPGRAIDER: рулетка, апгрейды, батлы, контракты и просмотр рекламы за монеты.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
